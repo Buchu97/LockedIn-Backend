@@ -1,0 +1,23 @@
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "name": "TommaHeda",
+  "password": "password123",
+  "email": "a@gmail.com",
+  "role": "STUDENT"
+}
+
+### All User
+GET  http://localhost:8080/api/users/
+Content-Type: application/json
+
+
+### get by ID
+GET  http://localhost:8080/api/users/id/2
+Content-Type: application/json
+
+
+### get User by email
+GET  http://localhost:8080/api/users/email/tommaheda@gmail.com
+Content-Type: application/json
