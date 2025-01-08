@@ -1,5 +1,6 @@
 package com.example.lockedIn.service;
 
+import com.example.lockedIn.model.Course;
 import com.example.lockedIn.model.User;
 import com.example.lockedIn.repo.UserRepository;
 // import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,9 @@ public class UserService {
 
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    public void addCourse(Long userId, Course course) {
+        userRepository.addCourse(userId, course);
     }
 }

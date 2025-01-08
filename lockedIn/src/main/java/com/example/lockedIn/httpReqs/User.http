@@ -1,4 +1,4 @@
-POST http://localhost:8080/api/users/register
+POST http://localhost:8081/api/users/register
 Content-Type: application/json
 
 {
@@ -9,15 +9,15 @@ Content-Type: application/json
 }
 
 ### All User
-GET  http://localhost:8080/api/users/
+GET  http://localhost:8081/api/users/
 Content-Type: application/json
 
 
 ### get by ID
-GET  http://localhost:8080/api/users/id/2
+GET  http://localhost:8081/api/users/id/2
 Content-Type: application/json
 
 
 ### get User by email
-GET  http://localhost:8080/api/users/email/tommaheda@gmail.com
+GET  http://localhost:8081/api/users/email/tommaheda@gmail.com
 Content-Type: application/json

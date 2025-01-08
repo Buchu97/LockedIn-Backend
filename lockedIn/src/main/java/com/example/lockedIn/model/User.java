@@ -5,8 +5,14 @@ import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
+
+import java.util.List;
+
 import com.example.lockedIn.enums.UserRole;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Data
@@ -20,5 +26,9 @@ public class User {
     private String password;
     private String email;
     private UserRole role;
+
+    @ManyToMany(mappedBy = "users")
+    @JsonIgnoreProperties("users")
+    private List<Course> courses;
 
 }
